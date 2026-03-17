@@ -6,7 +6,7 @@ Generic parameter type yang kita deklarasikan di method, hanya bisa diakses di m
 Ini cocok jika kita ingin membuat generic method, tanpa harus mengubah deklarasi class
  */
 public class ArrayHelper {
-    public static <T> int count(T[] array) {
+    public static <T> Integer count(T[] array) {
         return array.length;
     }
 }
