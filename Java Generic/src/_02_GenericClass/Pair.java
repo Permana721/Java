@@ -1,5 +1,9 @@
 package _02_GenericClass;
-
+/*
+Parameter type di Generic class boleh lebih dari satu
+Namun harus menggunakan nama type berbeda
+Ini sangat berguna ketika kita ingin membuat generic parameter type yang banyak
+ */
 public class Pair<T, U> {
     private T first;
     private U second;
