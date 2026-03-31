@@ -5,7 +5,6 @@ import java.util.List;
 Iterable adalah parent untuk semua collection di Java, kecuali Map
 Iterable sendiri sangat sederhana, hanya digunakan agar mendukung for-each loop
 Karena semua collection pasti implement iterable, secara otomatis maka semua collection di Java mendukung perulangan for-each, jadi bukan cuma Array
-
  */
 public class IterableApp {
     static void main(String[] args) {
