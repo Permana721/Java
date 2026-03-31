@@ -15,3 +15,17 @@ public class EnumApp {
         System.out.println(customer.level);
     }
 }
+
+/*
+class ProductCategory{
+    Category type;
+}
+
+public abstract class Product {
+    static void main(String[] args) {
+        ProductCategory productCategory = new ProductCategory();
+        productCategory.type = Category.ELECTRONICS;
+        System.out.println(productCategory.type);
+    }
+}
+*/
