@@ -19,6 +19,7 @@ public class IterableApp {
         Iterator adalah interface yang mendefinisikan cara kita melakukan mengakses element di collection secara sequential
         For-each sendiri muncul sejak Java 5, sebelum Java 5 untuk melakukan iterasi collection, biasanya dilakukan manual menggunakan Iterator object
          */
+//      Ini manual dengan menggunakan Iterator
         System.out.println("ITERATOR");
         Iterator<String> iterator = names.iterator();
 
