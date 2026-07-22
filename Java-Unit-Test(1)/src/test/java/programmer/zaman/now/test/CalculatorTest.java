@@ -77,4 +77,3 @@ public class CalculatorTest {
         assumeTrue("DEV".equals(System.getenv("PROFILE")));
     }
 }
-// Test
