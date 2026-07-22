@@ -1,0 +1,70 @@
+nohup: ignoring input
+fatal: Unable to create '/home/permana/Code/Java/Learn Java/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, or the lock file may be stale
+fatal: Unable to create '/home/permana/Code/Java/Learn Java/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, or the lock file may be stale
+Push command is git push origin main:main
+To http://100.102.109.4:3000/PermanaSD/Learn-Java.git
+   6674e5c..ef2e27f  main -> main
+fatal: Unable to create '/home/permana/Code/Java/Learn Java/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, or the lock file may be stale
+fatal: Unable to create '/home/permana/Code/Java/Learn Java/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, or the lock file may be stale
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   .gitwatch.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+fatal: Unable to create '/home/permana/Code/Java/Learn Java/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, or the lock file may be stale
+fatal: Unable to create '/home/permana/Code/Java/Learn Java/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, or the lock file may be stale
+[main e1b5b0d] Scripted auto-commit on change (2026-07-15 02:42:22) by gitwatch.sh
+ 2 files changed, 7 insertions(+), 1 deletion(-)
+fatal: Unable to create '/home/permana/Code/Java/Learn Java/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, or the lock file may be stale
+fatal: Unable to create '/home/permana/Code/Java/Learn Java/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, or the lock file may be stale
+fatal: Unable to create '/home/permana/Code/Java/Learn Java/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, or the lock file may be stale
+fatal: Unable to create '/home/permana/Code/Java/Learn Java/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, or the lock file may be stale
+Push command is git push origin main:main
+remote: error: cannot lock ref 'refs/heads/main': is at 3fd5a0913b2645cab598bce60b9aff7a08d3e94d but expected 52ee2e4050a23e46ff1cbd3fee08746467fefa32        
+To http://100.102.109.4:3000/PermanaSD/Learn-Java.git
+ ! [remote rejected] main -> main (incorrect old value provided)
+error: failed to push some refs to 'http://100.102.109.4:3000/PermanaSD/Learn-Java.git'
+fatal: Unable to create '/home/permana/Code/Java/Learn Java/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, or the lock file may be stale
+Push command is git push origin main:main
+To http://100.102.109.4:3000/PermanaSD/Learn-Java.git
+   3fd5a09..381e788  main -> main
+fatal: Unable to create '/home/permana/Code/Java/Learn Java/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, or the lock file may be stale
+[main 9b5b5c5] Scripted auto-commit on change (2026-07-15 02:42:43) by gitwatch.sh
+ 1 file changed, 6 insertions(+)
+fatal: Unable to create '/home/permana/Code/Java/Learn Java/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, or the lock file may be stale
+[main a674016] Scripted auto-commit on change (2026-07-15 02:42:48) by gitwatch.sh
+ 1 file changed, 3 insertions(+)
+fatal: Unable to create '/home/permana/Code/Java/Learn Java/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, or the lock file may be stale
