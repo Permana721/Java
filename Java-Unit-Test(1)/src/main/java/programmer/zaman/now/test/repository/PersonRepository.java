@@ -1,4 +1,8 @@
 package programmer.zaman.now.test.repository;
 
-public class PersonRepository {
+import programmer.zaman.now.test.data.Person;
+
+public interface PersonRepository {
+
+    Person selectById(String id);
 }
