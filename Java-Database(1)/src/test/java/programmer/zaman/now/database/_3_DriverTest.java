@@ -11,8 +11,8 @@ public class DriverTest {
     @Test
     void testRegister() {
         try {
-            Driver mysqlDriver = new com.mysql.cj.jdbc.Driver();
-            DriverManager.registerDriver(mysqlDriver);
+            Driver postgreDriver = new org.postgresql.Driver();
+            DriverManager.registerDriver(postgreDriver);
         } catch (SQLException exception) {
             Assertions.fail(exception);
         }

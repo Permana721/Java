@@ -12,11 +12,12 @@ public class ConnectionPoolTest {
     @Test
     void testHikariCP() {
         HikariConfig config = new HikariConfig();
-        config.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        config.setJdbcUrl("jdbc:mysql://localhost:3306/belajar_java_db");
-        config.setUsername("java");
-        config.setPassword("root");
+        config.setDriverClassName("org.postgresql.Driver");
+        config.setJdbcUrl("jdbc:postgresql://localhost:5432/java");
+        config.setUsername("permana");
+        config.setPassword("");
 
+        // config pool
         config.setMaximumPoolSize(10);
         config.setMinimumIdle(5);
         config.setIdleTimeout(60_000);

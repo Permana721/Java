@@ -11,11 +11,9 @@ public class StatementTest {
     @Test
     void testCreateStatement() throws SQLException {
         Connection connection = ConnectionUtil.getDataSource().getConnection();
-
         Statement statement = connection.createStatement();
 
         statement.close();
-
         connection.close();
     }
 
@@ -25,8 +23,8 @@ public class StatementTest {
         Statement statement = connection.createStatement();
 
         String sql = """
-                INSERT INTO customers(id, name, email)
-                VALUES ("1", 'Permana', 'mana@mail.com')
+                INSERT INTO customers(name, email)
+                VALUES ('Permana', 'mana@mail.com')
                 """;
         int update = statement.executeUpdate(sql);
         System.out.println(update);

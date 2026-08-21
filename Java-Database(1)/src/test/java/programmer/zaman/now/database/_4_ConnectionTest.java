@@ -9,12 +9,12 @@ import java.sql.Driver;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class ConnectionTest {
+public class __ConnectionTest {
     @BeforeAll
     static void beforeAll() {
         try {
-            Driver mysqlDriver = new com.mysql.cj.jdbc.Driver();
-            DriverManager.registerDriver(mysqlDriver);
+            Driver postgreDriver = new org.postgresql.Driver();
+            DriverManager.registerDriver(postgreDriver);
         } catch (SQLException exception) {
             exception.printStackTrace();
         }
@@ -22,9 +22,9 @@ public class ConnectionTest {
 
     @Test
     void testConnection() {
-        String jdbcUrl = "jdbc:mysql://localhost:3306/belajar_java_db";
-        String username = "java";
-        String password = "root";
+        String jdbcUrl = "jdbc:postgresql://localhost:5432/java";
+        String username = "permana";
+        String password = "";
 
         try {
             Connection connection = DriverManager.getConnection(jdbcUrl, username, password);
@@ -37,12 +37,14 @@ public class ConnectionTest {
 
     @Test
     void testConnectionClose() {
-        String jdbcUrl = "jdbc:mysql://localhost:3306/belajar_java_db";
-        String username = "java";
-        String password = "root";
+        String jdbcUrl = "jdbc:postgresql://localhost:5432/java";
+        String username = "permana";
+        String password = "";
 
         try (Connection connection = DriverManager.getConnection(jdbcUrl, username, password)) {
-            System.out.println("Sukses connect ke database");
+            System.out.println("Sukses membuat koneksi");
+            connection.close();
+            System.out.println("Sukses menutup koneksi");
         } catch (SQLException exception) {
             Assertions.fail(exception);
         }
