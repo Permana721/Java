@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-public class ConnectionPoolTest {
+public class _5_ConnectionPoolTest {
     @Test
     void testHikariCP() {
         HikariConfig config = new HikariConfig();
@@ -28,13 +28,13 @@ public class ConnectionPoolTest {
             Connection connection = dataSource.getConnection();
             connection.close();
             dataSource.close();
-        } catch (SQLException e){
-            Assertions.fail(e);
+        } catch (SQLException exception){
+            Assertions.fail(exception);
         }
     }
 
     @Test
     void testUtil() throws SQLException {
-        Connection connection = ConnectionUtil.getDataSource().getConnection();
+        Connection connection = ConnectionUtil.getDataSource().getConnection(); // Menggunakan ConnectionUtil agar tidak perlu membuat CP terus terusan
     }
 }
