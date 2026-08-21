@@ -7,7 +7,7 @@ import java.sql.Driver;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class DriverTest {
+public class _3_DriverTest {
     @Test
     void testRegister() {
         try {
