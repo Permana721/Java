@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class StatementTest {
+public class _6_StatementTest {
     @Test
     void testCreateStatement() throws SQLException {
         Connection connection = ConnectionUtil.getDataSource().getConnection();
@@ -24,7 +24,7 @@ public class StatementTest {
 
         String sql = """
                 INSERT INTO customers(name, email)
-                VALUES ('Permana', 'mana@mail.com')
+                VALUES ('Permana2', 'mana2@mail.com')
                 """;
         int update = statement.executeUpdate(sql);
         System.out.println(update);
@@ -57,6 +57,14 @@ public class StatementTest {
                 SELECT * FROM customers
                 """;
         ResultSet resultSet = statement.executeQuery(sql);
+
+        while (resultSet.next()) {
+            String id = resultSet.getString("id");
+            String name = resultSet.getString("name");
+            String email = resultSet.getString("email");
+
+            System.out.println(String.join(" | ", id, name, email));
+        }
 
         resultSet.close();
         statement.close();
