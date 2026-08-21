@@ -9,7 +9,7 @@ import java.sql.Driver;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class __ConnectionTest {
+public class _4_ConnectionTest {
     @BeforeAll
     static void beforeAll() {
         try {
@@ -41,10 +41,8 @@ public class __ConnectionTest {
         String username = "permana";
         String password = "";
 
-        try (Connection connection = DriverManager.getConnection(jdbcUrl, username, password)) {
-            System.out.println("Sukses membuat koneksi");
-            connection.close();
-            System.out.println("Sukses menutup koneksi");
+        try (Connection connection = DriverManager.getConnection(jdbcUrl, username, password)) { // --> Dengan membuat parameter seperti ini
+            System.out.println("Sukses membuat koneksi");                                     // Maka akan otomatis menutup koneksi dan tidak perlu membuat connection.close();
         } catch (SQLException exception) {
             Assertions.fail(exception);
         }
