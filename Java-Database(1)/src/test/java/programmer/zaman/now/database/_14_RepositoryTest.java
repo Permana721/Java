@@ -9,7 +9,7 @@ import programmer.zaman.now.database.repository.CommentRepositoryImpl;
 
 import java.util.List;
 
-public class RepositoryTest {
+public class _14_RepositoryTest {
     private CommentRepository commentRepository;
 
     @BeforeEach
