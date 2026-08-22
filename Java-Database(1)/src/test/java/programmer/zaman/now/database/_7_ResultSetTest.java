@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class ResultSetTest {
+public class _7_ResultSetTest {
     @Test
     void testExecuteQuery() throws SQLException {
         Connection connection = ConnectionUtil.getDataSource().getConnection();
