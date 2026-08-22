@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import java.sql.*;
 
-public class AutoIncrement {
+public class _11_AutoIncrement {
     @Test
     void testAutoIncrement() throws SQLException {
         Connection connection = ConnectionUtil.getDataSource().getConnection();
