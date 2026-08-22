@@ -6,7 +6,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class _13_TransactionTest {
+public class _13_1_TransactionTest {
     @Test
     void testCommit() throws SQLException {
         Connection connection = ConnectionUtil.getDataSource().getConnection();
