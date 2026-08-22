@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import java.sql.*;
 
-public class DateTest {
+public class _12_DateTest {
     @Test
     void testDate() throws SQLException {
         Connection connection = ConnectionUtil.getDataSource().getConnection();
