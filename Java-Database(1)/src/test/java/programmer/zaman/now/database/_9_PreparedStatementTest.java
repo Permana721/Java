@@ -7,7 +7,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class _8_PreparedStatementTest {
+public class _9_PreparedStatementTest {
     @Test
     void testPrepareStatement() throws SQLException {
         Connection connection = ConnectionUtil.getDataSource().getConnection();
