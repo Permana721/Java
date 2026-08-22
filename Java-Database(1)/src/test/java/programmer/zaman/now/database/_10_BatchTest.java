@@ -7,7 +7,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class BatchTest {
+public class _10_BatchTest {
     @Test
     void testStatement() throws SQLException {
         Connection connection = ConnectionUtil.getDataSource().getConnection();
