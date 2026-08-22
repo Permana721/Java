@@ -6,7 +6,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class TransactionTest {
+public class _13_TransactionTest {
     @Test
     void testCommit() throws SQLException {
         Connection connection = ConnectionUtil.getDataSource().getConnection();
@@ -21,7 +21,7 @@ public class TransactionTest {
             preparedStatement.close();
         }
 
-        connection.commit();
+        connection.commit(); // Wajib tambahin commit di akhir Transaction
         connection.close();
     }
 
@@ -42,4 +42,5 @@ public class TransactionTest {
         connection.rollback();
         connection.close();
     }
+
 }
