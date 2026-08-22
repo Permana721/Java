@@ -7,7 +7,7 @@ import java.sql.DatabaseMetaData;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class MetaDataTest {
+public class _13_2_MetaDataTest {
     @Test
     void testDatabaseMetaData() throws SQLException {
         Connection connection = ConnectionUtil.getDataSource().getConnection();
