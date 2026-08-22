@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class SqlInjectionTest {
+public class _8_SqlInjectionTest {
     @Test
     void testSqlInjection() throws SQLException {
         Connection connection = ConnectionUtil.getDataSource().getConnection();
