@@ -4,11 +4,12 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Stream;
 
-public class OrderingOperationTest {
+public class _9_OrderingOperationTest {
     @Test
     void testSorted() {
-        List.of("Ari", "Permana", "Surya", "Dharma", "Arido", "Shifuka").stream()
+        Stream.of("Ari", "Permana", "Surya", "Dharma", "Arido", "Shifuka")
                 .sorted()
                 .forEach(System.out::println);
     }
@@ -17,7 +18,7 @@ public class OrderingOperationTest {
     void testSortedWithComparator() {
         Comparator<String> reverseComparator = Comparator.reverseOrder();
 
-        List.of("Ari", "Permana", "Surya", "Dharma", "Arido", "Shifuka").stream()
+        Stream.of("Ari", "Permana", "Surya", "Dharma", "Arido", "Shifuka")
                 .sorted(reverseComparator)
                 .forEach(System.out::println);
     }
