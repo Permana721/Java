@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import java.util.List;
 import java.util.Optional;
 
-public class RetrievingOperationTest {
+public class _8_RetrievingOperationTest {
     @Test
     void testLimit() {
         List.of("Permana", "Surya", "Dharma", "Arido", "Shifuka").stream()
