@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-public class ForEachOperationTest {
+public class _12_ForEachOperationTest {
     @Test
     void testPeekBefore() {
         List.of("Permana", "Surya", "Dharma").stream()
