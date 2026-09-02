@@ -3,9 +3,8 @@ package programmer.zaman.now.stream;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
-import java.util.stream.Stream;
 
-public class LazyValuationTest {
+public class _5_LazyValuationTest {
     @Test
     void testIntermediateOperation() {
         List<String> names = List.of("Permana", "Surya", "Dharma");
