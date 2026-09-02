@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.stream.Stream;
 
-public class ParallelStreamTest {
+public class _15_ParallelStreamTest {
     @Test
     void testSequential() {
         Stream.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
