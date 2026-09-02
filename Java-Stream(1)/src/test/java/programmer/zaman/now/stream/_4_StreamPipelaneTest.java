@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import java.util.List;
 import java.util.stream.Stream;
 
-public class StreamPipelaneTest {
+public class _4_StreamPipelaneTest {
     @Test
     void testCreateStreamPipeline() {
         // Jarang digunakan cara seperti ini
@@ -19,7 +19,7 @@ public class StreamPipelaneTest {
     @Test
     void testCreateStreamPipelineBestPractice() {
         List<String> list = List.of("Permana", "Surya", "Dharma");
-
+        // Best practice lebih singkat
         list.stream().map(name -> name.toUpperCase()).map(upper -> "Mr." + upper).forEach(System.out::println);
     }
 }
