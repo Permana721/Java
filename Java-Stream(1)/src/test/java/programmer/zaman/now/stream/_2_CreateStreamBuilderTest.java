@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.stream.Stream;
 
-public class CreateStreamBuilderTest {
+public class _2_CreateStreamBuilderTest {
     @Test
     void testCreateStreamBuilder() {
         Stream.Builder<String> builder = Stream.builder();
