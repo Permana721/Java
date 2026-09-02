@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import java.time.*;
 
-public class _8_YearYearmonthMonthday {
+public class _8_YearYearmonthMonthdayTest {
     @Test
     void create() {
         Year year = Year.now();
