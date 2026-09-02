@@ -8,7 +8,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class CollectorsTest {
+public class _13_CollectorsTest {
     Stream<String> getStream() {
         return Stream.of("Permana", "Surya", "Dharma");
     }
@@ -20,9 +20,8 @@ public class CollectorsTest {
         Set<String> immutableSet = getStream().collect(Collectors.toUnmodifiableSet());
         System.out.println(immutableSet);
 
-        List<String> list = getStream().collect(Collectors.toList());
-        System.out.println(list);
-        List<String> immutableList = getStream().collect(Collectors.toUnmodifiableList());
+        List<String> list = getStream().toList();
+        List<String> immutableList = getStream().toList();
         System.out.println(immutableList);
     }
 
@@ -30,7 +29,7 @@ public class CollectorsTest {
     void testCollectorsMap() {
         Map<String, Integer> map = getStream().collect(Collectors.toMap(
                 name -> name,
-                name -> name.length()
+                String::length
         ));
         System.out.println(map);
     }
