@@ -7,7 +7,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.stream.Stream;
 
-public class CreateStreamTest {
+public class _1_CreateStreamTest {
     @Test
     void testCreateEmptyOrSingleStream() {
         Stream<String> emptyStream = Stream.empty();
@@ -15,13 +15,16 @@ public class CreateStreamTest {
             System.out.println(data);
         });
 
-        Stream<String> oneStream = Stream.of("Permana");
+        Stream<String> oneStream = Stream.of("Permana"); // Wajib memasukan data
         oneStream.forEach(data -> {
             System.out.println(data);
         });
 
         String data = null;
-        Stream<String> emptyOrNotStream = Stream.ofNullable(data);
+        Stream<String> emptyOrNotStream = Stream.ofNullable(data); // Tidak wajib memasukan data
+        emptyOrNotStream.forEach(s -> {
+            System.out.println(emptyOrNotStream);
+        });
     }
 
     @Test
@@ -39,6 +42,7 @@ public class CreateStreamTest {
         streamFromArray.forEach(System.out::println);
     }
 
+    // Collection to Stream
     @Test
     void testCreateStreamFromCollection() {
         Collection<String> collection = List.of("Permana", "Surya", "Dharma");
@@ -46,6 +50,7 @@ public class CreateStreamTest {
         stringStream.forEach(System.out::println);
     }
 
+    // Infinite loop
     @Test
     void testCreateInfiniteStream() {
         Stream<String> stream = Stream.generate(() -> "Permana Surya Dharma");
