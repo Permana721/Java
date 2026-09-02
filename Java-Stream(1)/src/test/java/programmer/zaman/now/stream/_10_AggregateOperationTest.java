@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import java.util.Comparator;
 import java.util.List;
 
-public class AggregateOperationTest {
+public class _10_AggregateOperationTest {
     @Test
     void testMax() {
         List.of("Ari", "Permana", "Surya", "Dharma", "Arido", "Shifuka").stream()
