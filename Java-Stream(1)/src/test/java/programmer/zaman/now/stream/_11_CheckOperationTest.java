@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-public class CheckOperationTest {
+public class _11_CheckOperationTest {
     @Test
     void testAnyMatch() {
         boolean match = List.of(1, 2, 3, 4, 22, 6, 7, 8, 9, 10).stream()
