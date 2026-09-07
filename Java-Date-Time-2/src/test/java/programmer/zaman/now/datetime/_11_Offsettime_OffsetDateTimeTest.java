@@ -4,6 +4,16 @@ import org.junit.jupiter.api.Test;
 
 import java.time.*;
 
+/*
+Java Date & Time API memiliki class yang bernama OffsetTime dan OffsetDateTime
+Class OffsetTime adalah seperti LocalTime, namun memiliki time zone offset
+Dan Class OffsetDateTime adalah seperti LocalDateTime, namun memiliki time zone offset
+Sekilas OffsetDateTime mirip dengan ZonedDateTime,
+yang membedakan adalah kalo OffsetDateTime hanya bisa menggunakan ZoneOffset, tidak bisa menggunakan ZoneId
+Format default OffsetTime adalah HH:mm:ss(+/-)ZoneOffset
+Format default OffsetDateTime adalah yyyy-MM-ddTHH:mm:ss(+/-)ZoneOffset
+ */
+
 public class _11_Offsettime_OffsetDateTimeTest {
     @Test
     void create() {
@@ -27,6 +37,11 @@ public class _11_Offsettime_OffsetDateTimeTest {
         System.out.println(offsetDateTime2);
         System.out.println(offsetDateTime3);
     }
+
+    /*
+    Apa yang bisa kita lakukan di LocalTime dan LocalDateTime bisa juga dilakukan di OffsetTime dan OffsetDateTime
+    Selain itu kita juga bisa konversi data dari dan ke non offset
+     */
 
     @Test
     void toLocalTime() {
