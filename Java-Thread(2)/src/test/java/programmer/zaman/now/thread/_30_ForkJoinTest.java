@@ -7,6 +7,25 @@ import java.util.concurrent.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
+/*
+Fork/Join merupakan fitur yang mulai kenalkan di Java 7 untuk membantu mempercepat proses secara parallel
+memanfaatkan semua cpu processor. Proses ini dicapai menggunakan teknik Devide and Conquer
+Secara sederhana, Fork/Join akan melakukan FORK,
+memecah pekerjaan menjadi pekerjaan yang lebih kecil dan dieksekusi secara asynchronous
+Setelah proses FORK selesai, proses JOIN akan dilakukan,
+yaitu menggabungkan hasil semua pekerjaan yang telah selesai menjadi satu hasil
+Fork/Join menggunakan thread pool bernama ForkJoinPool dan menggunakan thread ForkJoinWorkerThread
+ */
+
+/*
+ForkJoinPool merupakan turunan dari ExecutorService,
+jadi cara penggunaannya sama dengan ExecutorService sebelumnya yang sudah kita bahas
+Namun agar tujuan dari ForkJoinPool tercapai,
+baiknya kita menggunakan ForkJoinTask sebagai task yang kita submit ke ForkJoinPool
+ForkJoinTask adalah turunan dari Callable,
+sehingga kita bisa menggunakan method execute() atau submit() untuk mengirim task ke ForkJoinPool
+ */
+
 public class _30_ForkJoinTest {
     @Test
     void create() {
@@ -16,6 +35,13 @@ public class _30_ForkJoinTest {
         var executor = Executors.newWorkStealingPool();
         var executor1 = Executors.newWorkStealingPool(5);
     }
+
+    /*
+    ForkJoinTask adalah abstract class, dan terdapat 2 abstract class turunannya yang bisa kita gunakan agar
+    lebih mudah membuat ForkJoinTask
+    RecursiveAction, merupakan class yang bisa kita gunakan untuk task yang tidak mengembalikan result seperti Runnable
+    RecursiveTask, merupakan class yang bisa kita gunakan untuk task yang mengembalikan result seperti Callable
+     */
 
     @Test
     void recursiveAction() throws InterruptedException {
