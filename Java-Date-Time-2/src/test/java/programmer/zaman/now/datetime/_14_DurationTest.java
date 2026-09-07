@@ -5,6 +5,13 @@ import org.junit.jupiter.api.Test;
 import java.time.Duration;
 import java.time.LocalDateTime;
 
+/*
+Class Duration adalah representasi dari data durasi waktu
+Durasi waktu yang terdapat di class Duration
+Dengan menggunakan Duration,
+kita bisa dengan mudah mengkonversi durasi ke waktu yang kita inginkan, misal hour, minute, second dan nano second
+ */
+
 public class _14_DurationTest {
     @Test
     void create() {
