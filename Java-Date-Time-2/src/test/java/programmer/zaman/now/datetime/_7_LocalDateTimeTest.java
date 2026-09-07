@@ -7,6 +7,13 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.Month;
 
+/*
+Seperti dari nama class nya, LocalDateTime, class ini digunakan sebagai representasi tanggal dan waktu, mirip seperti class Date
+LocalDateTime juga immutable, jadi tidak bisa diubah setelah dibuat, jika diubah otomatis akan membuat object baru
+Cara pembuatan, cara mengubah, memanipulasi nya pun sama seperti LocalDate dan LocalTime
+Dan format default untuk LocalDateTime adalah menggunakan format yyyy-MM-ddTHH:mm:ss.nano
+ */
+
 public class _7_LocalDateTimeTest {
     @Test
     void create() {
@@ -54,6 +61,11 @@ public class _7_LocalDateTimeTest {
         System.out.println(localDateTime.getNano());
     }
 
+    /*
+    Kadang ada kebutuhan kita melakukan konversi data dari LocalDate ke LocalDateTime atau juga sebaliknya
+    Untuk melakukan konversi dari LocalDateTime ke LocalDate, kita bisa menggunakan method toLocalDate()
+    Sedangkan untuk melakukan konversi dari LocalDate ke LocalDateTime, kita bisa mennggunakann method atTime()
+     */
     @Test
     void date() {
         LocalDateTime localDateTime = LocalDateTime.now();
@@ -66,6 +78,11 @@ public class _7_LocalDateTimeTest {
         System.out.println(result);
     }
 
+    /*
+    Selain melakukan konnversi untuk tipe data LocalDate, kita juga bisa lakukan ke dan dari tipe data LocalTime.
+    Untuk melakukan konversi dari LocalDateTime ke LocalTime, kita bisa menggunakan method toLocalTime()
+    Sedangkan untuk melakukan konversi dari LocalTime ke LocalDateTime, kita bisa mennggunakann method atDate()
+     */
     @Test
     void time() {
         LocalDateTime localDateTime = LocalDateTime.now();
