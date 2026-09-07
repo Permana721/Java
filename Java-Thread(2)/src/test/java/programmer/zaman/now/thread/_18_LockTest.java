@@ -4,6 +4,19 @@ import org.junit.jupiter.api.Test;
 
 import java.util.concurrent.locks.ReentrantLock;
 
+/*
+Java menyediakan high level concurrency package untuk melakukan locking atau waiting for conditions
+Ini adalah alternatif dari low level synchronized dan manual wait dan notify
+Untuk saat ini,
+sangat disarankan menggunakan package locks dibandingkan menggunakan low level synchronization sebelumnya yang sudah kita bahas
+ */
+
+/*
+Lock interface merupakan alternatif implementasi dari synchronized method dan synchronized statement
+Untuk melakukan lock, kita bisa gunakan method lock() dan setelah selesai, kita bisa menggunakan method unlock() untuk melepaskan lock
+Implementasi dari interface Lock adalah class ReentrantLock
+ */
+
 public class _18_LockTest {
     @Test
     void testLock() throws InterruptedException {
@@ -28,6 +41,14 @@ public class _18_LockTest {
 
         System.out.println(counter.getValue());
     }
+
+    /*
+    Kadang ada kondisi dimana kita ingin membedakan lock antara operasi update dan operasi get
+    Untuk kasus seperti ini, kita bisa membuat dua buah variable Lock
+    Namun, di Java disediakan cara yang lebih mudah, yaitu menggunakan interface ReadWriteLock
+    ReadWriteLock merupakan lock yang mendukung dua jenis operasi, read dan write
+    Implementasi dari interface ReadWriteLock adalah class ReentrantReadWriteLock
+     */
 
     @Test
     void testReadWriteLock() throws InterruptedException {
@@ -54,6 +75,14 @@ public class _18_LockTest {
     }
 
     String message;
+
+    /*
+    Condition merupakan alternatif lain dari monitor method (wait, notify dan notifyAll)
+    Pada Java modern saat ini, sangat disarankan menggunakan Condition dibanding monitor method
+    Condition memiliki method wait() untuk menunggu, signal() untuk mentrigger satu thread,
+    dan signalAll() untuk mentrigger semua thread yang menunggu
+    Cara pembuatan Condition, kita bisa menggunakan method newCondition() milik Lock
+     */
 
     @Test
     void condition() throws InterruptedException {
