@@ -7,6 +7,21 @@ import java.util.concurrent.Flow;
 import java.util.concurrent.SubmissionPublisher;
 import java.util.concurrent.TimeUnit;
 
+/*
+Saat ini sudah sangat populer dengan paradigma concurrency yang bernama reactive programming
+Banyak sekali library untuk reactive programming seperti RxJava, Reactor, Akka Stream dan lain-lain
+Sejak Java 9, diperkenalkan fitur Reactive Stream di Java
+Reactive Stream merupakan standar baru untuk Asynchronous Stream Processing
+ */
+
+/*
+Dalam Reactive Stream, kita mengenal istilah namanya Flow (aliran data),
+berbeda dengan yang sebelumnya sudah kita pelajari tentang Thread, dalam Reactive Stream, yang difokuskan adalah aliran data
+Dalam aliran data, artinya ada yang mengirim data dan ada yang menerima data.
+Pihak yang mengirim data, kita sebut Publisher, dan pihak yang menerima data, kita sebut Subscriber
+Sebuah aliran data, kita sebut namanya Flow
+ */
+
 public class _32_ReactiveStreamTest {
     @Test
     void publish() throws InterruptedException {
