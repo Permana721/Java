@@ -5,6 +5,15 @@ import org.junit.jupiter.api.Test;
 import java.util.Calendar;
 import java.util.Date;
 
+/*
+Class Calendar adalah class yang digunakan sebagai pembantu class Date
+Pada class Date, hampir semua method untuk melakukan manipulasi tanggal dan waktu sudah ditandai sebagai @Deprecated,
+artinya tidak direkomendasikan digunakan lagi
+Untuk itu, kita butuh menggunakan class Calendar untuk memanipulasi tanggal dan waktu
+Class Calendar tidak memiliki public constructor, sehingga untuk membuat object Calendar,
+kita akan menggunakan static method milik calendar bernama getInstance()
+ */
+
 public class _3_CalendarTest {
     @Test
     void create() {
