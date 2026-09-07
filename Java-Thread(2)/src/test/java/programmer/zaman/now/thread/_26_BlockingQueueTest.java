@@ -5,7 +5,17 @@ import org.junit.jupiter.api.Test;
 import java.util.Comparator;
 import java.util.concurrent.*;
 
+/*
+BlockingQueue merupakan turunan dari Queue, dari namanya kita tahu bahwa ini adalah collection dengan tipe antrian,
+yang membedakan sifat dari BlockingQueue adalah dia aman diakses oleh beberapa thread, baik itu yang memasukkan data,
+atau mengambil data
+BlockingQueue mendukung method wait ketika mengambil data, dan juga wait ketika menyimpan data
+Jika queue kosong, thread yang mengambil data akan diminta untuk menunggu sampai data ada
+Dan jika queue penuh, thread yang mengambil data akan diminta untuk menunggu sampai ada tempat kosong
+ */
+
 public class _26_BlockingQueueTest {
+    // ArrayBlockingQueue, implementasi BlockingQueue dengan ukuran fix
     @Test
     void arrayBlockingQueue() throws InterruptedException {
         final var queue = new ArrayBlockingQueue<String>(5);
@@ -37,6 +47,7 @@ public class _26_BlockingQueueTest {
         exector.awaitTermination(1, TimeUnit.DAYS);
     }
 
+    // LinkedBlockingQueue, implementasi BlockingQueue dengan ukuran bisa berkembang
     @Test
     void linkedBlockingQueue() throws InterruptedException {
         final var queue = new LinkedBlockingQueue<String>();
@@ -68,6 +79,8 @@ public class _26_BlockingQueueTest {
         exector.awaitTermination(1, TimeUnit.DAYS);
     }
 
+
+    // PriorityBlockingQueue, implementasi BlockingQueue dengan otomatis berurut berdasarkan prioritas
     @Test
     void priorityBlockingQueue() throws InterruptedException {
         final var queue = new PriorityBlockingQueue<Integer>(10, Comparator.reverseOrder());
@@ -96,6 +109,8 @@ public class _26_BlockingQueueTest {
         exector.awaitTermination(1, TimeUnit.DAYS);
     }
 
+    // DelayQueue, implementasi BlockingQueue untuk tipe data Delayed,
+    // dimana data tidak bisa diambil sebelum waktu delay yang telah ditentukan
     @Test
     void delayedQueue() throws InterruptedException {
         final var queue = new DelayQueue<ScheduledFuture<String>>();
@@ -121,6 +136,8 @@ public class _26_BlockingQueueTest {
         executor.awaitTermination(1, TimeUnit.DAYS);
     }
 
+    // SynchronousQueue, implementasi BlockingQueue dimana thread yang menambah data harus menunggu sampai ada
+    // thread yang mengambil data, begitu juga kebalikannya
     @Test
     void synchronousQueue() throws InterruptedException {
         final var queue = new SynchronousQueue<String>();
@@ -153,6 +170,11 @@ public class _26_BlockingQueueTest {
         exector.awaitTermination(1, TimeUnit.DAYS);
     }
 
+    /*
+    BlockingDeque merupakan turunan dari BlockingQueue
+    BlockingDeque tidak hanya mendukung FIFO (first in first out), tapi juga LIFO (last in last out)
+    Implementasi BlockingDeque hanyalan LinkedBlockingDeque
+     */
     @Test
     void blockingDeque() throws InterruptedException {
         final var queue = new LinkedBlockingDeque<String>();
@@ -183,6 +205,11 @@ public class _26_BlockingQueueTest {
         exector.awaitTermination(1, TimeUnit.DAYS);
     }
 
+    /*
+    TransferQueue Merupakan turunan dari BlockingQueue yang membolehkan pengirim
+    data ke queue menunggu sampai data ada yang menerima
+    Implementasi TransferQueue hanyalah LinkedTransferQueue
+     */
     @Test
     void transferQueue() throws InterruptedException {
         final var queue = new LinkedTransferQueue<String>();
