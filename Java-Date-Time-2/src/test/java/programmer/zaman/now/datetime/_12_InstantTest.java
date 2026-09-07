@@ -4,6 +4,13 @@ import org.junit.jupiter.api.Test;
 
 import java.time.*;
 
+/*
+Sebelumnya, milliseconds direpresentasikan dengan tipe data long, di Java Date & Time API baru,
+implementasi milliseconds direpresentasikan dalam class Instant
+Instant juga sama seperti class Date, dia menggunakan milliseconds  setelah Unix EPOCH 1970-01-01T00:00:00Z
+Artinya secara time zone, Instant menggunakan time zone UTC (00:00)
+ */
+
 public class _12_InstantTest {
     @Test
     void create() {
@@ -35,6 +42,14 @@ public class _12_InstantTest {
         System.out.println(instant);
     }
 
+    /*
+    Karena Instant berisikan milisecond, jadi kita bisa lakukan konversi ke tipe data lainnya, seperti LocalDate,
+    LocalTime dan ZonedLocalTime
+    Namu karena Instant menggunakann time zone UTC,
+    jadi kita perlu memberi tahu time zone apa yang akan kita gunakan ketika kita lakukan konversi
+    Untuk melakuka konversi dari Instant ke tipe data lainnya,
+    kita bisa menggunakan method ofInstant(instant, zone) ketika membuat object nya
+     */
     @Test
     void fromInstant() {
         Instant instant = Instant.now();
@@ -54,6 +69,11 @@ public class _12_InstantTest {
         System.out.println(offsetDateTime);
     }
 
+    /*
+    Selain itu konversi juga bisa dilakukan ke Instant, dari tipe data LocalDateTime dan ZonedDateTime
+    Namun karena Instant menggunakan time zone UTC,
+    jadi kita perlu menambahkan ZoneOffset jika konversi dari tipe data yang tidak memiliki time zone
+     */
     @Test
     void toInstant() {
         Instant instant = LocalDateTime.now().toInstant(ZoneOffset.ofHours(7));
