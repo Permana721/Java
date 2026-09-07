@@ -5,6 +5,14 @@ import org.junit.jupiter.api.Test;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
+/*
+Berbeda dengan LocalDate, LocalTime merupakan representasi data waktu (tanpa tanggal)
+Cara penggunaanya dan method-method nya hampir sama dengan LocalDate
+LocalTime juga immutable,
+jadi kita tidak bisa mengubahnya setelah datanya dibuat, jika kita ubah, maka akan menghasilkan object LocalTime baru
+Format standard LocalTime adalah HH:mm:ss.nano, dimana second dan nano second nya optional
+ */
+
 public class _6_LocalTimeTest {
     @Test
     void create() {
