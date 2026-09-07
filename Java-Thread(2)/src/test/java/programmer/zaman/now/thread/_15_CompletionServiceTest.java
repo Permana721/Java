@@ -5,6 +5,15 @@ import org.junit.jupiter.api.Test;
 import java.util.Random;
 import java.util.concurrent.*;
 
+/*
+CompletionService merupakan sebuah interface yang digunakan untuk memisahkan antara bagian
+yang mengeksekusi asynchronous task dan yang menerima hasil dari task yang sudah selesai
+Kadang ada kebutuhan misal kita butuh menjalankan sesuatu secara parallel,
+lalu ada satu thread yang melakukan eksekusi task dan satu thread menunggu hasil nya
+Kita bisa menggunakan CompletionService untuk melakukan itu
+Implementasi interface CompletionService adalah class ExecutorCompletionService
+ */
+
 public class _15_CompletionServiceTest {
     private Random random = new Random();
 
