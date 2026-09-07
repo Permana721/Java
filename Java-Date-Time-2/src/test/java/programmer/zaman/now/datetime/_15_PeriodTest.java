@@ -5,6 +5,11 @@ import org.junit.jupiter.api.Test;
 import java.time.LocalDate;
 import java.time.Period;
 
+/*
+Class Period mirip dengan Duration, yang membedakan adalah Period adalah durasi untuk tanggal
+Cara penggunaan Period hampir mirip dengan Duration
+ */
+
 public class _15_PeriodTest {
     @Test
     void create() {
