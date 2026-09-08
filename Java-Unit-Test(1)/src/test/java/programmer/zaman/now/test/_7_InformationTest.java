@@ -2,6 +2,12 @@ package programmer.zaman.now.test;
 
 import org.junit.jupiter.api.*;
 
+/*
+Walaupun mungkin jarang kita gunakan,
+tapi kita juga bisa mendapatkan informasi test yang sedang berjalan menggunakan interface TestInfo
+Kita bisa menambahkan TestInfo sebagai parameter di function unit test
+ */
+
 @DisplayName("information test")
 public class InformationTest {
 

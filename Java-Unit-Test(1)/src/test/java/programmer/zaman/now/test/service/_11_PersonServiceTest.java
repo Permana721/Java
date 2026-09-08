@@ -40,6 +40,15 @@ public class PersonServiceTest {
 //        var person = personService.get("permana");
 //
 //        Assertions.assertNotNull(person);
-//        Assertions.assertEquals()
+//        Assertions.assertEquals();
 //    }
+
+
+    @Test
+    void testRegisterSuccess() {
+        var person = personService.register("Permana");
+        Assertions.assertNotNull(person);
+        Assertions.assertEquals("Permana", person.getName());
+        Assertions.assertNotNull(person.getId());
+    }
 }
