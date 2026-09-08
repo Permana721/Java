@@ -7,6 +7,21 @@ import java.sql.DatabaseMetaData;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/*
+Kadang kita ingin mendapat informasi seputar database yang kita gunakan
+Informasi tersebut bernama MetaData
+Ada banyak jenis metadata, seperti DatabaseMetaData, ParameterMetaData, ResultSetMetaData
+ */
+
+/*
+DatabaseMetaData adalah informasi seputar seluruh database yang kita gunakan, seperti misal :
+Nama database
+Versi database
+Table yang ada di database
+dan lain-lain
+Untuk membuat DatabaseMetaData, kita bisa menggunakan method getMetaData() dari object Collection
+ */
+
 public class _13_2_MetaDataTest {
     @Test
     void testDatabaseMetaData() throws SQLException {

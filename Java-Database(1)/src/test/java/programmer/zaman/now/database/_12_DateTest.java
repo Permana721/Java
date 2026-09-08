@@ -4,10 +4,20 @@ import org.junit.jupiter.api.Test;
 
 import java.sql.*;
 
+/*
+Seperti kita ketahui, tipe tanggal dan waktu di database biasanya banyak, ada Date, Time ada juga Timestamp
+Sedangkan di Java hanya terdapat tipe data java.util.Date
+Agar bisa menghandle hal ini,
+terdapat class-class turunan java.util.Date di package java.sql yang bernama Date, Time dan Timestamp
+Sesuai dengan namanya, class-class tersebut digunakan sebagai representasi di Java
+Secara otomatis JDBC bisa melakukan konversi tipe data tersebut dari database menjadi object di Java
+ */
+
 public class _12_DateTest {
     @Test
     void testDate() throws SQLException {
         Connection connection = ConnectionUtil.getDataSource().getConnection();
+        // Insert data
         String sql = """
             INSERT INTO sample_time(sample_time, sample_date, sample_timestamp)
             VALUES (?, ?, ?)
@@ -27,6 +37,7 @@ public class _12_DateTest {
     @Test
     void testDateQuery() throws SQLException {
         Connection connection = ConnectionUtil.getDataSource().getConnection();
+        // Select Data
         String sql = "SELECT * FROM sample_time";
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
         ResultSet resultSet = preparedStatement.executeQuery();

@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assumptions.*;
 
 @DisplayNameGeneration(SimpleDisplayNameGenerator.class)
 //@DisplayName("Test untuk calculator class")
-public class _4_CalculatorTest {
+public class _1_CalculatorTest {
 
     private Calculator calculator = new Calculator();
 

@@ -9,7 +9,7 @@ Kita bisa menambahkan TestInfo sebagai parameter di function unit test
  */
 
 @DisplayName("information test")
-public class InformationTest {
+public class _7_InformationTest {
 
     @Test
     @Tags({

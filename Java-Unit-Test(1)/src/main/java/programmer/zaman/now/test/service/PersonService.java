@@ -18,4 +18,9 @@ public class PersonService {
             throw new IllegalArgumentException("Person not found!");
         }
     }
+
+    public Person register(String name) {
+        Person person = new Person(name);
+        return person;
+    }
 }

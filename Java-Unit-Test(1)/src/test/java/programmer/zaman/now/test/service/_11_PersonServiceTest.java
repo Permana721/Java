@@ -6,15 +6,13 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.api.extension.Extensions;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
-import programmer.zaman.now.test.data.Person;
 import programmer.zaman.now.test.repository.PersonRepository;
 
 @Extensions({
         @ExtendWith(MockitoExtension.class)
 })
-public class PersonServiceTest {
+public class _11_PersonServiceTest {
     @Mock
     private PersonRepository personRepository;
     

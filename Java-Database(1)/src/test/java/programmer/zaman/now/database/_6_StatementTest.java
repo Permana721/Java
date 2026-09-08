@@ -7,7 +7,20 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+/*
+Saat kita terkoneksi ke database via Connection, sudah pasti kita ingin mengirim perintah SQL ke database
+Connection adalah object yang bertugas sebagai jembatan koneksi dari aplikasi kita ke database,
+untuk mengirim perintah SQL, kita bisa menggunakan beberapa object lain,
+salah satunya yang akan kita bahas sekarang, yaitu Statement
+ */
+
 public class _6_StatementTest {
+    /*
+    java.sql.Statement adalah interface yang bisa kita gunakan untuk mengirim SQL ke database,
+    sekaligus menerima response data dari database
+    Ada banyak method yang bisa kita gunakan di Statement untuk mengirim perintah SQL, kita akan bahas satu persatu
+    Untuk membuat statement kita bisa menggunakan method createStatement() milik Connection
+     */
     @Test
     void testCreateStatement() throws SQLException {
         Connection connection = ConnectionUtil.getDataSource().getConnection();
@@ -48,6 +61,11 @@ public class _6_StatementTest {
         connection.close();
     }
 
+    /*
+    Jika kita ingin mengirim perintah SQL yang mengembalikan data, maka kita bisa menggunakan method executeQuery(sql)
+    Method ini akan mengembalikan object java.sql.ResultSet, yaitu berisikan data-data hasil query SQL yang kita kirimkan
+    Pembahasan interface ResultSet akan kita bahas lebih detail lagi nanti di chapter tersendiri
+     */
     @Test
     void testExecuteQuery() throws SQLException {
         Connection connection = ConnectionUtil.getDataSource().getConnection();

@@ -7,9 +7,35 @@ import org.junit.jupiter.api.parallel.ExecutionMode;
 
 import java.util.concurrent.TimeUnit;
 
-@Execution(ExecutionMode.CONCURRENT)
-public class SlowTest {
+/*
+Secara default, JUnit tidak mendukung eksekusi unit test secara paralel,
+artinya unit test akan dijalankan secara sequential satu per satu
+Namun kadang ada kasus kita ingin mempercepat proses unit test sehingga dijalankan secara paralel,
+hal ini bisa kita lakukan di JUnit, namun perlu beberapa langkah
+Tapi ingat, pastikan unit test kita aman ketika dijalankan secara paralel
+ */
 
+/*
+Hal pertama yang perlu kita lakukan adalah membuat file junit-platform.properties di resource
+Lalu menambah value :
+junit.jupiter.execution.parallel.enabled = true
+ */
+
+/*
+Walaupun sudah mengaktifkan fitur paralel, tapi bukan berarti secara otomatis semua unit test berjalan paralel,
+agar unit test berjalan paralel, kita perlu menggunakan annotation @Execution
+Lalu memilih jenis execution nya, misal untuk paralel bisa menggunakan ExecutionMode.CONCURRENT
+ */
+@Execution(ExecutionMode.CONCURRENT)
+public class _10_SlowTest {
+
+    /*
+    Kadang kita ingin memastikan bahwa sebuah unit test berjalan tidak lebih dari sekian detik
+    Misal ketika kasus kita ingin memastikan kode program kita mempunyai performa bagus dan cepat
+    JUnit memiliki fitur timeout, yaitu memastikan bahwa unit test berjalan tidak lebih dari waktu yang ditentukan,
+    jika melebihi waktu yang ditentukan, secara otomatis unit test tersebut akan gagal
+    Kita bisa menggunakan annotation @Timeout untuk melakukan hal tersebut
+     */
     @Test
     @Timeout(value = 5, unit = TimeUnit.SECONDS)
     void testSlow() throws InterruptedException {

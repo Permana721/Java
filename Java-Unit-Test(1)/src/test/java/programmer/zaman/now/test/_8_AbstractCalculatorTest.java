@@ -16,7 +16,7 @@ dan test class tinggal menjadi child class dari parent test class
 @Extensions({
         @ExtendWith(_8_RandomParameterResolver.class)
 })
-public class AbstractCalculatorTest {
+public class _8_AbstractCalculatorTest {
     protected Calculator calculator = new Calculator();
 
     @BeforeEach

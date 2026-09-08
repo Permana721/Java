@@ -7,7 +7,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.List;
 import java.util.Random;
 
-public class RandomCalculatorTest extends _8_AbstractCalculatorTest {
+public class _9_RandomCalculatorTest extends _8_AbstractCalculatorTest {
     @Test
     void testRandom(Random random) {
         var a = random.nextInt();

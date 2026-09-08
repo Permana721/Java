@@ -9,6 +9,16 @@ import programmer.zaman.now.database.repository.CommentRepositoryImpl;
 
 import java.util.List;
 
+/*
+Dalam buku Domain-Driven Design, Eric Evans menjelaskan bahwa
+“repository is a mechanism for encapsulating storage, retrieval, and search behavior,
+which emulates a collection of objects”
+Pattern Repository ini biasanya digunakan sebagai jembatan antar business logic aplikasi kita
+dengan semua perintah SQL ke database
+Jadi semua perintah SQL akan ditulis di Repository, sedangkan business logic kode program kita hanya cukup
+menggunakan Repository tersebut
+ */
+
 public class _14_RepositoryTest {
     private CommentRepository commentRepository;
 
